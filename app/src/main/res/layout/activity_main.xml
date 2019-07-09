@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="@string/title"
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:background="#2b9f9f"/>
+
+            <Button
+                android:id="@+id/viewBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#e9eaea">
+                <AutoCompleteTextView
+                    android:id="@+id/agentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dropDownHeight="60dp"
+                    android:inputType="textCapSentences"
+                    android:hint="@string/agentName"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#161b79"
+                    android:textSize="15sp"
+                    android:text="@string/biodata"/>
+
+                <EditText
+                    android:id="@+id/fullNam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:hint="@string/fullName"/>
+                <AutoCompleteTextView
+                    android:id="@+id/stat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:dropDownHeight="60dp"
+                    android:hint="@string/state"/>
+                <AutoCompleteTextView
+                    android:id="@+id/lg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:dropDownHeight="60dp"
+                    android:hint="@string/lga"/>
+                <EditText
+                    android:id="@+id/twn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:hint="@string/town"/>
+                <EditText
+                    android:id="@+id/phoneNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/phNo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/fmMer"/>
+                <Spinner
+                    android:id="@+id/farmMr"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/farmMerch"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#e9eaea">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coopBe"/>
+
+    <RadioGroup
+        android:id="@+id/CBradioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/CByes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/yes"/>
+
+        <RadioButton
+            android:id="@+id/CBno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"/>
+
+    </RadioGroup>
+
+                <!--Spinner
+                    android:id="@+id/CBSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:entries="@array/yon"/-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/memSz"/>
+                <EditText
+                    android:id="@+id/memSz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cooNam"/>
+                <EditText
+                    android:id="@+id/cooNam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fmSz"/>
+                <EditText
+                    android:id="@+id/cfmSz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="(Hectares/Acres)"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fmCol"/>
+
+    <RadioGroup
+        android:id="@+id/FCradioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/fcRB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/yes"/>
+
+        <RadioButton
+            android:id="@+id/fcRB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"/>
+
+    </RadioGroup>
+                <!--Spinner
+                    android:id="@+id/FCSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:entries="@array/yon"/-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/indvFmSz"/>
+                <EditText
+                    android:id="@+id/indvFmSz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/varRice"/>
+                <EditText
+                    android:id="@+id/varRice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qtyHarv"/>
+                <EditText
+                    android:id="@+id/qtyHarv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/applyFert"/>
+
+    <RadioGroup
+        android:id="@+id/AFradioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/afRB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/yes"/>
+
+        <RadioButton
+            android:id="@+id/afRB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"/>
+
+    </RadioGroup>
+                <!--Spinner
+                    android:id="@+id/AFSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:entries="@array/yon"/-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yield"/>
+                <EditText
+                    android:id="@+id/yield"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noApp"/>
+                <EditText
+                    android:id="@+id/noApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qtyFert"/>
+                <EditText
+                    android:id="@+id/qtyFert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appLoan"/>
+
+    <RadioGroup
+        android:id="@+id/ALradioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/alRB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/yes"/>
+
+        <RadioButton
+            android:id="@+id/alRB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"/>
+
+    </RadioGroup>
+                <!--Spinner
+                    android:id="@+id/ALSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:entries="@array/yon"/-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/szLoan"/>
+                <EditText
+                    android:id="@+id/szLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/srcRice"/>
+                <EditText
+                    android:id="@+id/srcRice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qtyPdRice"/>
+                <EditText
+                    android:id="@+id/qtyPdRice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/majBuy"/>
+                <EditText
+                    android:id="@+id/majBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buyCom"/>
+                <Spinner
+                    android:id="@+id/buyCom"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/comsol"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qtyBuy"/>
+                <EditText
+                    android:id="@+id/qtyBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sellRice"/>
+                <EditText
+                    android:id="@+id/sellRice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priceBf"/>
+                <EditText
+                    android:id="@+id/priceBf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/incrDecr"/>
+                <EditText
+                    android:id="@+id/incDec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reaz"/>
+                <EditText
+                    android:id="@+id/reaz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hwSupp"/>
+                <EditText
+                    android:id="@+id/hwSupp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sepTrans"/>
+
+    <RadioGroup
+        android:id="@+id/STradioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/stRB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/yes"/>
+
+        <RadioButton
+            android:id="@+id/stRB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"/>
+
+    </RadioGroup>
+                <!--Spinner
+                    android:id="@+id/STSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:entries="@array/yon"/-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ysSepTrans"/>
+                <EditText
+                    android:id="@+id/ysSepTrans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/avgCost"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/avgCostF1"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/location1"/>
+                <EditText
+                    android:id="@+id/avgCostT1"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dest1"/>
+                <EditText
+                    android:id="@+id/avgCostAmt1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="@string/cost1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/avgCostF2"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/location2"/>
+                <EditText
+                    android:id="@+id/avgCostT2"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dest2"/>
+                <EditText
+                    android:id="@+id/avgCostAmt2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="@string/cost2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/avgCostF3"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/location3"/>
+                <EditText
+                    android:id="@+id/avgCostT3"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dest3"/>
+                <EditText
+                    android:id="@+id/avgCostAmt3"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="@string/cost3"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/costPdy"/>
+                <EditText
+                    android:id="@+id/costPdy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/genSales"/>
+                <Spinner
+                    android:id="@+id/genSales"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/geneSa"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/avgQty"/>
+                <EditText
+                    android:id="@+id/avgQty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pdyChp"/>
+                <Spinner
+                    android:id="@+id/pdyChp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/timeQues"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/why1"/>
+                <EditText
+                    android:id="@+id/why1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expRice"/>
+                <Spinner
+                    android:id="@+id/expRice"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/timeQues"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/why2"/>
+                <EditText
+                    android:id="@+id/why2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/majChal"/>
+                <EditText
+                    android:id="@+id/majChal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addrChal"/>
+                <EditText
+                    android:id="@+id/addrChal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yearSell"/>
+                <Spinner
+                    android:id="@+id/yearSell"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/timeQues"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/othSell"/>
+                <EditText
+                    android:id="@+id/othSell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addInfo"/>
+                <EditText
+                    android:id="@+id/addIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="submit"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

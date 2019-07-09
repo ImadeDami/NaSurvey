@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">NA-Survey</string>
+    <string name="Q1">Question 1</string>
+    <string name="Q2">Question 2</string>
+    <string name="Q3">Question 3</string>
+    <string name="Q4">Question 4</string>
+    <string name="Q5">Question 5</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="resp3">Response 3</string>
+    <string name="title">Novus Agro Rice Survey</string>
+    <string name="submit">Submit</string>
+
+    <string name="biodata">Respondent\'s Bio Data</string>
+    <string name="agentName">Enter your full name as an AGENT</string>
+    <string name="fullName">Enter Full Name</string>
+    <string name="state">Enter State</string>
+    <string name="lga">Enter LGA</string>
+    <string name="town">Enter Town</string>
+    <string name="phNo">Enter Phone Number</string>
+    <string name="fmMer">Are you a farmer or merchant?</string>
+
+    <string name="coopBe">Do you belong to a cooperative or some group?</string>
+    <string name="memSz">If yes, What is the membership size of your cooperative?</string>
+    <string name="fmSz">If it is a cooperative, what is the farm size allocated per person</string>
+    <string name="cooNam">If yes, (Name of Cooperative)?</string>
+    <string name="fmCol">or do you farm collectively?</string>
+    <string name="indvFmSz">As an individual farmer, what is the size of your farm?</string>
+    <string name="varRice">What variety of rice do you plant?</string>
+    <string name="qtyHarv">What quantity of rice did you harvest last year?</string>
+    <string name="applyFert">Did you apply fertilizer? </string>
+    <string name="yield">If Yes, What was the yield? </string>
+    <string name="noApp">If No, what was your reason for not applying?</string>
+    <string name="qtyFert">What quantity of fertilizer did you apply?</string>
+    <string name="appLoan">Did you apply for a loan?</string>
+    <string name="szLoan">If Yes, What was the size of the loan?</string>
+    <string name="srcRice">If merchant, where do you source your rice from?</string>
+    <string name="qtyPdRice">What Quantity of Paddy Rice do you have?</string>
+    <string name="majBuy">Who are your major buyers?</string>
+    <string name="buyCom">Do your buyers come to you or you solicit for them?</string>
+    <string name="qtyBuy">What average quantity does each buy at a time?</string>
+    <string name="sellRice">For how much do you sell rice now?</string>
+    <string name="priceBf">What was the price before?</string>
+    <string name="incrDecr">Is it increasing or decreasing?</string>
+    <string name="reaz">and what is the reason?</string>
+    <string name="hwSupp">How do you supply?</string>
+    <string name="sepTrans">If you deliver do you charge separately for transportation?</string>
+    <string name="ysSepTrans">If yes, do you charge separately for Transportation and what is the cost?</string>
+    <string name="avgCost">If Yes, What is the average cost of hauling a truck to locations?</string>
+    <string name="costPdy">What influences the price of paddy rice in your area?</string>
+    <string name="genSales">What generate sales in terms of demand? Price, season, quality of product or marketing</string>
+    <string name="avgQty">What is the average quantity you sell based on these factors?</string>
+    <string name="pdyChp">When is paddy rice cheapest in your area?</string>
+    <string name="why1">Why?</string>
+    <string name="expRice">When is paddy rice the most expensive in your area?</string>
+    <string name="why2">Why?</string>
+    <string name="majChal">What are your major challenges?</string>
+    <string name="addrChal">How do you address these challenges?</string>
+    <string name="yearSell">What time of the year do you majorly sell rice?</string>
+    <string name="othSell">What other time do you sell rice?</string>
+    <string name="addInfo">Any additional information that you may desire to give</string>
+
+    <string name="location1">From 1</string>
+    <string name="location2">From 2</string>
+    <string name="location3">From 3</string>
+    <string name="dest1">Destination 1</string>
+    <string name="dest2">Destination 2</string>
+    <string name="dest3">Destination 3</string>
+    <string name="cost1">Cost 1</string>
+    <string name="cost2">Cost 2</string>
+    <string name="cost3">Cost 3</string>
+
+    <string-array name="farmMerch">
+        <item>farmer</item>
+        <item>merchant</item>
+    </string-array>
+
+    <string-array name="maritalStatus">
+        <item>single</item>
+        <item>married</item>
+        <item>divorced</item>
+        <item>choose not to say</item>
+    </string-array>
+
+    <string-array name="yon">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+
+    <string-array name="comsol">
+        <item>They come</item>
+        <item>I solicit</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="geneSa">
+        <item>Price</item>
+        <item>Season</item>
+        <item>Marketing</item>
+        <item>Quality of product</item>
+    </string-array>
+
+    <string-array name="timeQues">
+        <item>Nov-Jan</item>
+        <item>Jan-Mar</item>
+        <item>Mar-May</item>
+        <item>May-July</item>
+        <item>July-Oct</item>
+        <item>Oct-Dec</item>
+    </string-array>
+</resources>
